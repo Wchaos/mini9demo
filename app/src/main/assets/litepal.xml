@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value = "mini9"></dbname>
+    <version value = "3"></version>
+    <list>
+        <mapping class = "com.netease.mini9demo.entity.Album"></mapping>
+        <mapping class = "com.netease.mini9demo.entity.Image"></mapping>
+        <mapping class = "com.netease.mini9demo.entity.Remind"></mapping>
+    </list>
+</litepal>

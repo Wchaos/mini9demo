@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">我的植物</string>
+    <string name="add_remind">添加新植物</string>
+    <string name="remind_plant_avatar">植物头像</string>
+</resources>

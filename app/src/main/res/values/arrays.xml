@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="remind_type">
+        <item></item>
+        <item>浇水</item>
+        <item>施肥</item>
+    </string-array>
+</resources>
