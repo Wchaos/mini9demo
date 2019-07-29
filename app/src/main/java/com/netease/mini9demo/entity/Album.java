@@ -9,7 +9,7 @@ public class Album extends LitePalSupport {
 
     private Integer id;
     private String name;
-    private String plant_tag;
+    private String plantTag;
 
 
     public Integer getId() {
@@ -28,11 +28,11 @@ public class Album extends LitePalSupport {
         this.name = name;
     }
 
-    public String getPlant_tag() {
-        return plant_tag;
+    public String getPlantTag() {
+        return plantTag;
     }
 
-    public void setPlant_tag(String plant_tag) {
-        this.plant_tag = plant_tag;
+    public void setPlantTag(String plantTag) {
+        this.plantTag = plantTag;
     }
 }

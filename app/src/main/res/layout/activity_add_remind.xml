@@ -16,17 +16,16 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/add_remind_back"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@mipmap/back"
+
+            android:layout_marginTop="10dp"
             android:background="#0000"
+            android:onClick="back"
             android:scaleType="centerCrop"
-            />
+            android:src="@mipmap/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,17 +46,16 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/add_remind_confirm"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@mipmap/confirm"
+            android:layout_marginTop="10dp"
+
             android:background="#0000"
+            android:onClick="savaInfo"
             android:scaleType="centerCrop"
-            />
+            android:src="@mipmap/confirm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--填写信息部分-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,6 +104,7 @@
             android:layout_marginStart="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text=""
             android:hint="为你的植物取个名字吧~"/>
 
         <TextView
@@ -120,11 +119,11 @@
             android:textSize="18sp"
             />
         <Spinner
+            android:id="@+id/add_remind_type"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_add_remind_thr"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:id="@+id/add_remind_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/remind_type"
@@ -132,8 +131,92 @@
 
         </Spinner>
 
+        <EditText
+            android:id="@+id/add_remind_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_remind_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="时间格式：yyyy-MM-dd HH:mm"
+            />
 
+        <LinearLayout android:orientation="horizontal"
+            android:id="@+id/lin_lyt_add_remind"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_remind_time"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <RelativeLayout
+                android:onClick="addOne"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_add_time_step"
+                    android:layout_centerInParent="true"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    />
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:onClick="subOne"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/sub"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+
+                    android:layout_centerInParent="true"
+                    android:text="天/次"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                     />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/add_extra_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lin_lyt_add_remind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="18sp"
+            android:hint="备注"/>
 
 
 

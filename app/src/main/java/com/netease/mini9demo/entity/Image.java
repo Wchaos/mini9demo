@@ -4,8 +4,8 @@ import org.litepal.crud.LitePalSupport;
 
 public class Image extends LitePalSupport {
     private Integer id;
-    private Integer album_id;
-    private Long create_time;
+    private Integer albumId;
+    private Long createTime;
     private String mood;
 
     public Integer getId() {
@@ -16,20 +16,20 @@ public class Image extends LitePalSupport {
         this.id = id;
     }
 
-    public Integer getAlbum_id() {
-        return album_id;
+    public Integer getAlbumId() {
+        return albumId;
     }
 
-    public void setAlbum_id(Integer album_id) {
-        this.album_id = album_id;
+    public void setAlbumId(Integer albumId) {
+        this.albumId = albumId;
     }
 
-    public Long getCreate_time() {
-        return create_time;
+    public Long getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Long create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
     public String getMood() {

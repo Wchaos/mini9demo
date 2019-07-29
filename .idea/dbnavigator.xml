@@ -81,7 +81,7 @@ select * from remind]]></console>
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="C:\Users\wangchao3\Desktop\mini9.db" schema="main" />
+            <file path="C:\Users\wangchao3\mini9.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

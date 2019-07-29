@@ -6,10 +6,12 @@ public class Remind extends LitePalSupport {
 
     private Integer id;
     private String plantName;
-    private Integer image_id;
+    private Integer imageId;
     private String remindType;
     private Long remindTime;
     private Integer remindStep;
+    private String extraInfo;
+
 
     public Integer getId() {
         return id;
@@ -27,12 +29,12 @@ public class Remind extends LitePalSupport {
         this.plantName = plantName;
     }
 
-    public Integer getImage_id() {
-        return image_id;
+    public Integer getImageId() {
+        return imageId;
     }
 
-    public void setImage_id(Integer image_id) {
-        this.image_id = image_id;
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
     }
 
     public String getRemindType() {
@@ -58,4 +60,13 @@ public class Remind extends LitePalSupport {
     public void setRemindStep(Integer remindStep) {
         this.remindStep = remindStep;
     }
+
+    public String getExtraInfo() {
+        return extraInfo;
+    }
+
+    public void setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+    }
+
 }
